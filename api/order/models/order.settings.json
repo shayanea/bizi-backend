@@ -1,0 +1,45 @@
+{
+  "connection": "default",
+  "collectionName": "orders",
+  "info": {
+    "name": "order"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "products": {
+      "collection": "product",
+      "via": "order"
+    },
+    "status": {
+      "type": "integer"
+    },
+    "shippingCost": {
+      "type": "biginteger"
+    },
+    "courier": {
+      "type": "string"
+    },
+    "orderItems": {
+      "type": "json"
+    },
+    "mobileNumber": {
+      "type": "integer"
+    },
+    "customer": {
+      "via": "orders",
+      "model": "customer"
+    }
+  }
+}

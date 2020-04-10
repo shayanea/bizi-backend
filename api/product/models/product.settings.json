@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "products",
+  "info": {
+    "name": "product"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "color": {
+      "type": "json"
+    },
+    "material": {
+      "type": "string"
+    },
+    "size": {
+      "type": "json"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "count": {
+      "type": "integer"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "createDate": {
+      "type": "date"
+    },
+    "order": {
+      "via": "products",
+      "model": "order"
+    }
+  }
+}

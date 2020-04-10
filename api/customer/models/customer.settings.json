@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "customers",
+  "info": {
+    "name": "customer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "mobileNumber": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "address": {
+      "type": "text"
+    },
+    "orders": {
+      "collection": "order",
+      "via": "customer"
+    }
+  }
+}
