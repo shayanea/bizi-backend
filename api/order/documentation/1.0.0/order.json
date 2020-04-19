@@ -550,9 +550,6 @@
                 "material": {
                   "type": "string"
                 },
-                "size": {
-                  "type": "object"
-                },
                 "price": {
                   "type": "integer"
                 },
@@ -569,6 +566,24 @@
                   "type": "string"
                 },
                 "order": {
+                  "type": "string"
+                },
+                "priceWithDiscount": {
+                  "type": "integer"
+                },
+                "productionCost": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "serailNumber": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "object"
+                },
+                "brand": {
                   "type": "string"
                 }
               }
@@ -614,6 +629,18 @@
                 }
               }
             }
+          },
+          "orderStatus": {
+            "type": "integer"
+          },
+          "priceWithDiscount": {
+            "type": "integer"
+          },
+          "invoiceNumber": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
           }
         }
       },
@@ -650,6 +677,18 @@
             "type": "integer"
           },
           "customer": {
+            "type": "string"
+          },
+          "orderStatus": {
+            "type": "integer"
+          },
+          "priceWithDiscount": {
+            "type": "integer"
+          },
+          "invoiceNumber": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           }
         }

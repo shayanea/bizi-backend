@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/warehouse-logs",
+      "handler": "warehouse-log.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/warehouse-logs/count",
+      "handler": "warehouse-log.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/warehouse-logs/:id",
+      "handler": "warehouse-log.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/warehouse-logs",
+      "handler": "warehouse-log.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/warehouse-logs/:id",
+      "handler": "warehouse-log.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/warehouse-logs/:id",
+      "handler": "warehouse-log.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

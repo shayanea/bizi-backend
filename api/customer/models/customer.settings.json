@@ -21,8 +21,8 @@
       "type": "text"
     },
     "orders": {
-      "collection": "order",
-      "via": "customer"
+      "via": "customer",
+      "collection": "order"
     }
   }
 }

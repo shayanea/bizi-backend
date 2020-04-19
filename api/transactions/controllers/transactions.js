@@ -5,11 +5,13 @@
  * to customize this controller
  */
 
-const { sanitizeEntity } = require("strapi-utils");
-
 module.exports = {
-  async findBestBuyest(ctx) {
-    let entities = await strapi.services.customer.fetchAll();
+  async mostPayed(ctx) {
+    let entities = await strapi.services.transactions.fetchAll();
+    console.log(entities);
+  },
+  async mostRecieved(ctx) {
+    let entities = await strapi.services.transactions.fetchAll();
     console.log(entities);
   },
 };

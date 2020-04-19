@@ -18,9 +18,6 @@
     "material": {
       "type": "string"
     },
-    "size": {
-      "type": "json"
-    },
     "price": {
       "type": "biginteger"
     },
@@ -39,6 +36,24 @@
     "order": {
       "via": "products",
       "model": "order"
+    },
+    "priceWithDiscount": {
+      "type": "biginteger"
+    },
+    "productionCost": {
+      "type": "biginteger"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "serailNumber": {
+      "type": "string"
+    },
+    "size": {
+      "type": "json"
+    },
+    "brand": {
+      "type": "string"
     }
   }
 }

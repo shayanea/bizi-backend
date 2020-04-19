@@ -58,6 +58,9 @@
     },
     "fullName": {
       "type": "string"
+    },
+    "courierId": {
+      "type": "integer"
     }
   }
 }

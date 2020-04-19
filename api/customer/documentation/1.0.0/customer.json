@@ -254,6 +254,63 @@
         }
       }
     },
+    "/customers/findBestBuyest": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Customer"
+        ],
+        "parameters": []
+      }
+    },
     "/customers/count": {
       "get": {
         "deprecated": false,
@@ -573,6 +630,18 @@
                   "type": "integer"
                 },
                 "customer": {
+                  "type": "string"
+                },
+                "orderStatus": {
+                  "type": "integer"
+                },
+                "priceWithDiscount": {
+                  "type": "integer"
+                },
+                "invoiceNumber": {
+                  "type": "string"
+                },
+                "description": {
                   "type": "string"
                 }
               }

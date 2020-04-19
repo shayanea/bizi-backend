@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "warehouse_logs",
+  "info": {
+    "name": "warehouseLog"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "status": {
+      "type": "integer"
+    },
+    "ownerId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "count": {
+      "type": "string"
+    },
+    "object": {
+      "type": "json"
+    }
+  }
+}

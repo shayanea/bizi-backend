@@ -1,0 +1,8 @@
+{
+  "provider": "cloudinary",
+  "providerOptions": {
+    "cloud_name": "dnaiwsvms",
+    "api_key": "991625789274283",
+    "api_secret": "zUCDY8mz6DJFT6LkGYY--10ZKnQ"
+  }
+}

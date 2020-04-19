@@ -38,8 +38,20 @@
       "type": "integer"
     },
     "customer": {
-      "via": "orders",
-      "model": "customer"
+      "model": "customer",
+      "via": "orders"
+    },
+    "orderStatus": {
+      "type": "integer"
+    },
+    "priceWithDiscount": {
+      "type": "biginteger"
+    },
+    "invoiceNumber": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

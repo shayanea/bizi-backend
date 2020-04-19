@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/customers/findBestBuyest",
+      "handler": "customer.findBestBuyest",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/customers/count",
       "handler": "customer.count",
       "config": {

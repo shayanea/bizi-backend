@@ -1,0 +1,28 @@
+{
+  "info": {
+    "name": "transactions"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "status": {
+      "type": "integer"
+    },
+    "transactionType": {
+      "type": "integer"
+    }
+  },
+  "connection": "default",
+  "collectionName": "transactions"
+}
