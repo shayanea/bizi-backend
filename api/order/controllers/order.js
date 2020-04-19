@@ -5,6 +5,4 @@
  * to customize this controller
  */
 
-// const { sanitizeEntity } = require("strapi-utils");
-
 module.exports = {};
