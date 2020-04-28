@@ -19,8 +19,8 @@
       "type": "integer"
     },
     "products": {
-      "collection": "product",
-      "via": "order"
+      "via": "order",
+      "collection": "product"
     },
     "status": {
       "type": "integer"

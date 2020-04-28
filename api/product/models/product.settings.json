@@ -34,8 +34,8 @@
       "type": "date"
     },
     "order": {
-      "via": "products",
-      "model": "order"
+      "model": "order",
+      "via": "products"
     },
     "priceWithDiscount": {
       "type": "biginteger"
@@ -54,6 +54,10 @@
     },
     "brand": {
       "type": "string"
+    },
+    "isAvailable": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

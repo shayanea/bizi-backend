@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 /**
- * Lifecycle callbacks for the `order` model.
+ * Lifecycle callbacks for the `salaries` model.
  */
 
 module.exports = {
@@ -39,9 +39,7 @@ module.exports = {
 
   // Before updating a value.
   // Fired before an `update` query.
-  beforeUpdate: async (model, attrs, options) => {
-    console.log(model, attrs, options);
-  },
+  // beforeUpdate: async (model, attrs, options) => {},
 
   // After updating a value.
   // Fired after an `update` query.

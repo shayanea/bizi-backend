@@ -1,0 +1,19 @@
+{
+  "info": {
+    "name": "employee"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "address": {
+      "type": "richtext"
+    }
+  },
+  "connection": "default",
+  "collectionName": "employees"
+}

@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/orders": {
+    "/salaries": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the salaries's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve salaries document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Order"
+                    "$ref": "#/components/schemas/Salaries"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Salaries"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new salaries record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve salaries document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/Salaries"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Salaries"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrder"
+                "$ref": "#/components/schemas/NewSalaries"
               }
             }
           }
         }
       }
     },
-    "/orders/count": {
+    "/salaries/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of salaries documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve salaries document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Salaries"
         ],
         "parameters": []
       }
     },
-    "/orders/{id}": {
+    "/salaries/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one salaries record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve salaries document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/Salaries"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Salaries"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single salaries record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve salaries document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/Salaries"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Salaries"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrder"
+                "$ref": "#/components/schemas/NewSalaries"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single salaries record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single salaries based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Salaries"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Order": {
+      "Salaries": {
         "required": [
           "id"
         ],
@@ -522,176 +522,44 @@
           "id": {
             "type": "string"
           },
-          "fullName": {
+          "serialNumber": {
             "type": "string"
           },
-          "address": {
+          "bankNumber": {
             "type": "string"
+          },
+          "transactionId": {
+            "type": "integer"
           },
           "price": {
             "type": "integer"
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "object"
-                },
-                "material": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "integer"
-                },
-                "count": {
-                  "type": "integer"
-                },
-                "image": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "createDate": {
-                  "type": "string"
-                },
-                "order": {
-                  "type": "string"
-                },
-                "priceWithDiscount": {
-                  "type": "integer"
-                },
-                "productionCost": {
-                  "type": "integer"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "serailNumber": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "object"
-                },
-                "brand": {
-                  "type": "string"
-                },
-                "isAvailable": {
-                  "type": "boolean"
-                }
-              }
-            }
-          },
-          "status": {
-            "type": "integer"
-          },
-          "shippingCost": {
-            "type": "integer"
-          },
-          "courier": {
-            "type": "string"
-          },
-          "orderItems": {
-            "type": "object"
-          },
-          "mobileNumber": {
-            "type": "integer"
-          },
-          "customer": {
-            "required": [
-              "id",
-              "mobileNumber"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "fullName": {
-                "type": "string"
-              },
-              "mobileNumber": {
-                "type": "integer"
-              },
-              "address": {
-                "type": "string"
-              },
-              "orders": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "orderStatus": {
-            "type": "integer"
-          },
-          "priceWithDiscount": {
-            "type": "integer"
-          },
-          "invoiceNumber": {
-            "type": "string"
-          },
           "description": {
+            "type": "string"
+          },
+          "staffId": {
             "type": "string"
           }
         }
       },
-      "NewOrder": {
+      "NewSalaries": {
         "properties": {
-          "fullName": {
+          "serialNumber": {
             "type": "string"
           },
-          "address": {
+          "bankNumber": {
             "type": "string"
+          },
+          "transactionId": {
+            "type": "integer"
           },
           "price": {
             "type": "integer"
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "status": {
-            "type": "integer"
-          },
-          "shippingCost": {
-            "type": "integer"
-          },
-          "courier": {
-            "type": "string"
-          },
-          "orderItems": {
-            "type": "object"
-          },
-          "mobileNumber": {
-            "type": "integer"
-          },
-          "customer": {
-            "type": "string"
-          },
-          "orderStatus": {
-            "type": "integer"
-          },
-          "priceWithDiscount": {
-            "type": "integer"
-          },
-          "invoiceNumber": {
-            "type": "string"
-          },
           "description": {
+            "type": "string"
+          },
+          "staffId": {
             "type": "string"
           }
         }
@@ -700,7 +568,7 @@
   },
   "tags": [
     {
-      "name": "Order"
+      "name": "Salaries"
     }
   ]
 }

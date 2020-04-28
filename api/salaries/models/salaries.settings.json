@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "salaries",
+  "info": {
+    "name": "salaries"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "serialNumber": {
+      "type": "string"
+    },
+    "bankNumber": {
+      "type": "string"
+    },
+    "transactionId": {
+      "type": "biginteger"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "staffId": {
+      "type": "string"
+    }
+  }
+}

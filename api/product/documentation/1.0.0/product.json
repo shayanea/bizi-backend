@@ -661,6 +661,10 @@
           },
           "brand": {
             "type": "string"
+          },
+          "isAvailable": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
@@ -704,6 +708,10 @@
           },
           "brand": {
             "type": "string"
+          },
+          "isAvailable": {
+            "type": "boolean",
+            "default": false
           }
         }
       }

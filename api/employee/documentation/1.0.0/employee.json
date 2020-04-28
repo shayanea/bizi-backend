@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/orders": {
+    "/employees": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Order"
+                    "$ref": "#/components/schemas/Employee"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Employee"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/Employee"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Employee"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrder"
+                "$ref": "#/components/schemas/NewEmployee"
               }
             }
           }
         }
       }
     },
-    "/orders/count": {
+    "/employees/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Employee"
         ],
         "parameters": []
       }
     },
-    "/orders/{id}": {
+    "/employees/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/Employee"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Employee"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Order"
+                  "$ref": "#/components/schemas/Employee"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Employee"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrder"
+                "$ref": "#/components/schemas/NewEmployee"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Order"
+          "Employee"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Order": {
+      "Employee": {
         "required": [
           "id"
         ],
@@ -527,171 +527,15 @@
           },
           "address": {
             "type": "string"
-          },
-          "price": {
-            "type": "integer"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "object"
-                },
-                "material": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "integer"
-                },
-                "count": {
-                  "type": "integer"
-                },
-                "image": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "createDate": {
-                  "type": "string"
-                },
-                "order": {
-                  "type": "string"
-                },
-                "priceWithDiscount": {
-                  "type": "integer"
-                },
-                "productionCost": {
-                  "type": "integer"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "serailNumber": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "object"
-                },
-                "brand": {
-                  "type": "string"
-                },
-                "isAvailable": {
-                  "type": "boolean"
-                }
-              }
-            }
-          },
-          "status": {
-            "type": "integer"
-          },
-          "shippingCost": {
-            "type": "integer"
-          },
-          "courier": {
-            "type": "string"
-          },
-          "orderItems": {
-            "type": "object"
-          },
-          "mobileNumber": {
-            "type": "integer"
-          },
-          "customer": {
-            "required": [
-              "id",
-              "mobileNumber"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "fullName": {
-                "type": "string"
-              },
-              "mobileNumber": {
-                "type": "integer"
-              },
-              "address": {
-                "type": "string"
-              },
-              "orders": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "orderStatus": {
-            "type": "integer"
-          },
-          "priceWithDiscount": {
-            "type": "integer"
-          },
-          "invoiceNumber": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
           }
         }
       },
-      "NewOrder": {
+      "NewEmployee": {
         "properties": {
           "fullName": {
             "type": "string"
           },
           "address": {
-            "type": "string"
-          },
-          "price": {
-            "type": "integer"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "status": {
-            "type": "integer"
-          },
-          "shippingCost": {
-            "type": "integer"
-          },
-          "courier": {
-            "type": "string"
-          },
-          "orderItems": {
-            "type": "object"
-          },
-          "mobileNumber": {
-            "type": "integer"
-          },
-          "customer": {
-            "type": "string"
-          },
-          "orderStatus": {
-            "type": "integer"
-          },
-          "priceWithDiscount": {
-            "type": "integer"
-          },
-          "invoiceNumber": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           }
         }
@@ -700,7 +544,7 @@
   },
   "tags": [
     {
-      "name": "Order"
+      "name": "Employee"
     }
   ]
 }
